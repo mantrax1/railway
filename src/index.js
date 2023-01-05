@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
 app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs')//motor de plantillas //añade logica de progranacionb en html(html plantillas)
 app.use(require('./rutas/index'))
